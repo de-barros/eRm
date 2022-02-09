@@ -3,7 +3,7 @@ function(object, item.subset="all", sorted = FALSE, main="Person-Item Map",
                  latdim="Latent Dimension", pplabel="Person\nParameter\nDistribution",
                  cex.gen=0.7, xrange=NULL,
                  warn.ord=TRUE, warn.ord.colour="black",
-                 irug=TRUE,hlight=TRUE,hitem=5, pp=NULL)
+                 irug=TRUE, hlight=TRUE, hitem=5, pp=NULL)
 {
     def.par <- par(no.readonly = TRUE) # save default, for resetting...
 
