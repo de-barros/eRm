@@ -103,14 +103,12 @@ function(object, item.subset="all", sorted = FALSE, main="Person-Item Map",
 
       }
       points(loc[i],j,pch=20,cex=1.5,col=ptcol) # plot item locations
-      points(loc[i],5,pch=21,cex=1.5,col=ptcol,bg = "red") # plot item locations
+      points(loc[5],5,pch=21,cex=1.5,col=ptcol,bg = "red") # plot item locations
       # this is too much; obscures the dots with too many data points present
       # text(loc[i],j,rev(rownames(tr)[i]),cex=cex.gen,pos=3,col=ptcol)
 
     }
     if (warn.ord) axis(4,at=1:nrow(tr),tick=FALSE, labels=warn, hadj=2.5, padj=0.7, las=2)#,cex.axis=cex.gen)
-
-### END irug
 
     # person parameters
     par(mar=c(0,4,3,1))
