@@ -3,7 +3,7 @@ function(object, item.subset="all", sorted = FALSE, main="Person-Item Map",
                  latdim="Latent Dimension", pplabel="Person\nParameter\nDistribution",
                  cex.gen=0.7, xrange=NULL,
                  warn.ord=TRUE, warn.ord.colour="black",
-                 irug=TRUE,hlight=TRUE, pp=NULL)
+                 irug=TRUE,hlight=TRUE,hitem=5, pp=NULL)
 {
     def.par <- par(no.readonly = TRUE) # save default, for resetting...
 
@@ -103,8 +103,8 @@ function(object, item.subset="all", sorted = FALSE, main="Person-Item Map",
 
       }
       points(loc[i],j,pch=20,cex=1.5,col=ptcol) # plot item locations
-      if(j == 5){
-        points(loc[i],5,pch=21,cex=1.5,col=ptcol,bg = "red") # plot item locations
+      if(j == hitem && hlight == TRUE){
+        points(loc[i],j,pch=21,cex=1.5,col=ptcol,bg = "red") # plot item locations, highlighted in red
       }
       # this is too much; obscures the dots with too many data points present
       # text(loc[i],j,rev(rownames(tr)[i]),cex=cex.gen,pos=3,col=ptcol)
